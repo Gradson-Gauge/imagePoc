@@ -95,27 +95,27 @@
 			<version>3.0</version>
 		</dependency>
 		<dependency>
-	<groupId>org.ghost4j</groupId>
-	<artifactId>ghost4j</artifactId>
-	<version>1.0.0</version>
-</dependency>
-<dependency>
-	<groupId>org.swinglabs</groupId>
-	<artifactId>pdf-renderer</artifactId>
-	<version>1.0.5</version>
-</dependency>
-<dependency>
-	<groupId>commons-codec</groupId>
-	<artifactId>commons-codec</artifactId>
-	<version>1.10</version>
-</dependency>
-<dependency>
-  <groupId>br.com.gauge</groupId>
-  <artifactId>jcgm</artifactId>
-  <version>0.1.1</version>
-  <scope>system</scope>
-  <systemPath>${basedir}/src/main/webapp/WEB-INF/lib/jcgm-image-0.1.1.jar</systemPath>
-</dependency>
+			<groupId>org.ghost4j</groupId>
+			<artifactId>ghost4j</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.swinglabs</groupId>
+			<artifactId>pdf-renderer</artifactId>
+			<version>1.0.5</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-codec</groupId>
+			<artifactId>commons-codec</artifactId>
+			<version>1.10</version>
+		</dependency>
+		<dependency>
+			<groupId>br.com.gauge</groupId>
+			<artifactId>jcgm</artifactId>
+			<version>0.1.1</version>
+			<scope>system</scope>
+			<systemPath>${basedir}/src/main/webapp/WEB-INF/lib/jcgm-image-0.1.1.jar</systemPath>
+		</dependency>
 	</dependencies>
 	<build>
 		<plugins>
