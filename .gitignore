@@ -14,3 +14,4 @@ build/
 .settings*
 /bin/
 /ImageMagick-6.9.2-6-Q16-x64-dll.exe
+/target/
