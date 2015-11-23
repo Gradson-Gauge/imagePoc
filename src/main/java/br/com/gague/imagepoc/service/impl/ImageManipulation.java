@@ -1,4 +1,5 @@
 package br.com.gague.imagepoc.service.impl;
+import java.awt.image.Raster;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -12,7 +13,12 @@ public class ImageManipulation {
 	public static void main(String[] args) {
 
 		File file = new File("/Users/jeeva/Pictures/wallpapers/water-drop.jpg");
+		String outFilePath = "/Users/jeeva/Pictures/wallpapers/water-drop-after-convert.jpg";
 
+		manipulation(file, outFilePath);
+	}
+
+	public static void manipulation(File file, String outFilePath) {
 		try {			
 			// Reading a Image file from file system
 			FileInputStream imageInFile = new FileInputStream(file);
@@ -26,7 +32,7 @@ public class ImageManipulation {
 			byte[] imageByteArray = decodeImage(imageDataString);
 
 			// Write a image byte array into file system
-			FileOutputStream imageOutFile = new FileOutputStream("/Users/jeeva/Pictures/wallpapers/water-drop-after-convert.jpg");
+			FileOutputStream imageOutFile = new FileOutputStream(outFilePath);
 
 			imageOutFile.write(imageByteArray);
 

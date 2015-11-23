@@ -21,10 +21,11 @@ public class FileConverter {
 
 	private ImageConverter getConverter(File file) {
 		String extension = FilenameUtils.getExtension(file.getName());
-		switch (extension.toLowerCase()) {
+		switch (extension.toLowerCase().trim()) {
 		case "pdf":
 			return new PDFConverter();
-			
+		case "cgm":
+			return new CGMConverter();
 		default:
 			new PDFConverter().createPdf(file, true);
 			return new ImageMacickConverter();
