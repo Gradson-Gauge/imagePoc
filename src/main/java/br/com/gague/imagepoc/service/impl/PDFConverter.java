@@ -24,9 +24,12 @@ import com.sun.pdfview.PDFPage;
 import br.com.gague.imagepoc.service.ImageConverter;
 
 public class PDFConverter extends ImageConverter {
+	
+	public boolean convertToPdf(File file) {
+		return true;
+	}
 
 	@SuppressWarnings("resource")
-	@Override
 	public boolean convertToPng(File file) {
 		try {
 			FileChannel channel = new RandomAccessFile(file, "r").getChannel();

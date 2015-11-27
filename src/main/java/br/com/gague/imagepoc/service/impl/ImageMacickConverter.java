@@ -10,12 +10,12 @@ import br.com.gague.imagepoc.service.ImageConverter;
 public class ImageMacickConverter extends ImageConverter {
 
 	@Override
-	public boolean convertToPng(File file) {
+	public boolean convertToPdf(File file) {
 		try {
 			// create the operation, add images and operators/options
 			IMOperation op = new IMOperation();
 			op.addImage(file.getAbsolutePath()); // source file
-			op.addImage(getPngPathDestination(file.getName())); // destination file
+			op.addImage(getPdfPathDestination(file.getName())); // destination file
 
 			// execute the operation
 			ConvertCmd cmd = new ConvertCmd();
@@ -29,3 +29,4 @@ public class ImageMacickConverter extends ImageConverter {
 		}
 	}
 }
+	

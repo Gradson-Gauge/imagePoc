@@ -15,7 +15,7 @@ public class FileConverter {
 		File file = copyFile(uploadFile);
 		
 		ImageConverter converterImage = getConverter(file);
-		return converterImage.convertToPng(file);
+		return converterImage.convertToPdf(file);
 	}
 
 
@@ -27,7 +27,6 @@ public class FileConverter {
 		case "cgm":
 			return new CGMConverter();
 		default:
-			new PDFConverter().createPdf(file, true);
 			return new ImageMacickConverter();
 		}
 	}

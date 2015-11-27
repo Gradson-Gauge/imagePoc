@@ -6,22 +6,26 @@ import org.apache.commons.io.FilenameUtils;
 
 public abstract class ImageConverter {
 	
-	private final String pathTarget = "C:\\Users\\mateus.brum\\Desktop\\convert\\";
+	private final String dirTarget = "C:\\Users\\mateus.brum\\Desktop\\convert\\";
 	
-	public abstract boolean convertToPng(File file);
+	public abstract boolean convertToPdf(File file);
 	
 	protected String getPngPathDestination(String fileName) {
 		String baseName = FilenameUtils.getBaseName(fileName);
-		return pathTarget + baseName + ".png";
+		return dirTarget + baseName + ".png";
 	}
 	
 	protected String getPngPathDestination(String fileName, int pageNumber) {
 		String baseName = FilenameUtils.getBaseName(fileName);
-		return pathTarget + baseName + "_" + pageNumber + ".png";
+		return dirTarget + baseName + "_" + pageNumber + ".png";
 	}
 	
 	protected String getPdfPathDestination(String fileName) {
 		String baseName = FilenameUtils.getBaseName(fileName);
-		return pathTarget + baseName + ".pdf";
+		return dirTarget + baseName + ".pdf";
+	}
+	
+	protected String getDirTarget() {
+		return this.dirTarget;
 	}
 }
