@@ -8,10 +8,14 @@
 *.war
 *.ear
 
-build/
-.project
-.classpath
-.settings*
-/bin/
-/ImageMagick-6.9.2-6-Q16-x64-dll.exe
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+
+
+/target/*
+.settings
+.metadata
 /target/
+.classpath
+.project
+/bin/*
